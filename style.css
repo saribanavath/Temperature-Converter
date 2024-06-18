@@ -1,0 +1,89 @@
+/* General styles */
+body {
+  background-color: #070708;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  margin-top: 50px;
+}
+
+/* Card styles */
+.card {
+  margin: 20px 0;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(215, 101, 13, 0.1);
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.inputSection {
+  background-color: #f6efef;
+}
+
+.resultSection {
+  background: linear-gradient(45deg, #ba4be3, #00d2ff);
+  color: #0c0101;
+}
+
+/* Input and button styles */
+.input-group {
+  margin-bottom: 20px;
+}
+
+.form-control {
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.input-group-append .form-control {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.convertBtn {
+  background-color: #090b0c;
+  border: none;
+  padding: 10px 50px;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+}
+
+.convertBtn:hover {
+  background-color: #4c94d3;
+}
+
+.convertBtn svg {
+  margin-left: 10px;
+}
+
+/* Result section styles */
+.resultSection {
+  text-align: center;
+  padding: 128px 20px;
+  border-radius: 100 10px 10px 0;
+}
+
+#resultValueSection {
+  display:flex;
+  align-items: baseline;
+}
+
+#convertedDegree {
+  font-size: 3em;
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+#degree,
+#convertedUnit {
+  font-size: 2em;
+  font-weight: normal;
+}
+
+  

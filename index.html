@@ -1,0 +1,70 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+
+  <title>Temperature Converter</title>
+</head>
+<body>
+
+  <div class="container">
+    <div class="row justify-content-center align-items-center">
+      <div class="card inputSection col-12 col-md-6">
+        <div class="card-body">
+          <form onsubmit="convertTemperature(event)">
+            <div class="row px-3">
+              <div class="col-12 col-md-11 px-4">
+                <span class="card-title d-block">Enter Temperature</span>
+                <label for="degreeInput" class="py-sm-2">Degree</label>
+                <div class="input-group">
+                  <input type="number" class="form-control" id="inputDegree" name="inputDegree" placeholder="Enter Degree" value="0" />
+                  <div class="input-group-append">
+                    <select class="form-control" id="selectInputDegreeType">
+                      <option value="C" selected>&deg;C</option>
+                      <option value="F">&deg;F</option>
+                      <option value="K">K</option>
+                    </select>
+                  </div>
+                </div>
+                <label for="selectConversionType" class="py-sm-2">Convert In</label>
+                <div class="input-group d-inline-block">
+                  <div class="input-group-append">
+                    <select class="form-control" id="selectConversionType">
+                      <option value="F" selected> Fahrenheit (&deg;F) </option>
+                      <option value="C">Celsius (&deg;C)</option>
+                      <option value="K">Kelvin (K)</option>
+                    </select>
+                  </div>
+                </div>
+                <button type="submit" class="convertBtn btn btn-lg col-12 col-md-6 offset-md-3 mt-4 rounded-pill d-flex justify-content-center align-items-center text-white"> Convert
+                  <svg class="mt-1" xmlns="http://www.w3.org/2000/svg" width="15px" height="15px" viewBox="0 0 21.367 20.826">
+                    <path id="Icon_awesome-arrow-right" data-name="Icon awesome-arrow-right" d="M9.085,4.042l1.059-1.059a1.14,1.14,0,0,1,1.617,0l9.271,9.266a1.14,1.14,0,0,1,0,1.617L11.76,23.137a1.14,1.14,0,0,1-1.617,0L9.085,22.078A1.146,1.146,0,0,1,9.1,20.443l5.747-5.475H1.145A1.142,1.142,0,0,1,0,13.823V12.3a1.142,1.142,0,0,1,1.145-1.145H14.85L9.1,5.678A1.138,1.138,0,0,1,9.085,4.042Z" transform="translate(0 -2.647)" fill="#fff" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="card resultSection col-12 col-md-6">
+        <div class="card-body d-flex justify-content-center align-items-center">
+          <div id="resultValueSection">
+            <div id="convertedDegree">32</div>
+            <h3 id="degree">&deg;</h3>
+            <h3 id="convertedUnit">F</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="logic.js"></script>
+</body>
+</html>
